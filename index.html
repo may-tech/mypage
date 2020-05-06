@@ -7,45 +7,49 @@
   <title>May's Portfoliosite</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
 </head>
 
 <body>
   <section class="hero is-medium is-fullheight" style="background-color: lightblue;">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-      <nav class="navbar">
-        <div class="container">
-          <div class="navbar-brand">
-            <div class="navbar-item is-size-2 is-family-monospace">
-              <h1>May's Portfolio</h1>
-            </div>
-            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-              <span></span>
-              <span></span>
-              <span></span>
-            </span>
-          </div>
-
-          <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end">
-              <a href="index.html" class="navbar-item">
-                Home
-              </a>
-              <a href="works.html" class="navbar-item">
-                Works
-              </a>
-              <a href="about.html" class="navbar-item">
-                About
-              </a>
-              <span class="navbar-item">
-                <div class="columns">
-                  <div class="column"></div>
-                </div>
+      <div id="app">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <div class="navbar-item is-size-2 is-family-monospace">
+                <h1>May's Portfolio</h1>
+              </div>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroA" @click="isOpen = !isOpen"
+              v-bind:class="{'is-active': isOpen}">
+                <span></span>
+                <span></span>
+                <span></span>
               </span>
             </div>
+
+            <div id="navbarMenuHeroA" class="navbar-menu" v-bind:class="{'is-active': isOpen}">
+              <div class="navbar-end">
+                <a href="index.html" class="navbar-item">
+                  Home
+                </a>
+                <a href="works.html" class="navbar-item">
+                  Works
+                </a>
+                <a href="about.html" class="navbar-item">
+                  About
+                </a>
+                <span class="navbar-item">
+                  <div class="columns">
+                    <div class="column"></div>
+                  </div>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
 
     <!-- Hero content: will be in the middle -->
@@ -67,6 +71,14 @@
       </div>
     </div>
   </section>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        isOpen: false
+      }
+    })
+  </script>
 </body>
 
 </html>
