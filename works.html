@@ -22,7 +22,7 @@
                 <h1>May's Page</h1>
               </div>
               <span class="navbar-burger burger" data-target="navbarMenuHeroA" @click="isOpen = !isOpen"
-              v-bind:class="{'is-active': isOpen}">
+                v-bind:class="{'is-active': isOpen}">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -58,16 +58,23 @@
         <h1 class="title"><strong>Works</strong></h1>
 
         <div class="tile is-ancestor">
-          <div class="tile is-vertical">
+          <div class="tile">
             <div class="tile is-parent">
               <article class="tile is-child box">
                 <figure class="image">
                   <p class="subtitle has-text-weight-bold">タスク管理アプリ</p>
-                  <a href="http://mysterious-reef-46065.herokuapp.com/">
-                  <img src="images/todoapp.png">
+                  <a href="http://mysterious-reef-46065.herokuapp.com/" target="blunk">
+                    <img src="images/todoapp.png">
                   </a>
+                  <span class="tag is-info is-light">Laravel</span>
+                  <span class="tag is-info is-light">PostgreSQL</span>
+                  <span class="tag is-info is-light">VirtualBox</span>
+                  <span class="tag is-info is-light">Heroku</span>
                 </figure>
               </article>
+            </div>
+
+            <div class="tile is-parent">
               <article class="tile is-child box">
                 <!-- <figure class="image is-4by3">
                   <img src="images/find-game.png">
@@ -75,7 +82,8 @@
                 <p class="has-text-weight-bold" style="font-size: 40px;line-height: 280px; color: #bfbfbf;">In
                   production</p>
               </article>
-              </article>
+            </div>
+            <div class="tile is-parent">
               <article class="tile is-child box">
                 <p class="has-text-weight-bold" style="font-size: 40px;line-height: 280px; color: #bfbfbf;">In
                   production</p>
@@ -84,24 +92,6 @@
                 </figure> -->
               </article>
             </div>
-            <!-- <div class="tile is-parent">
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-              </article>
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-              </article>
-              </article>
-              <article class="tile is-child box">
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png">
-                </figure>
-              </article>
-            </div> -->
           </div>
         </div>
       </div>
